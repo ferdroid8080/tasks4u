@@ -17,7 +17,7 @@ function Onboarding() {
 					</div>
 				</div>
 				<div className="Onboarding--action">
-					<Button primary rounded>Comenzar</Button>
+					<Button link to='/auth' primary rounded>Comenzar</Button>
 				</div>
 			</div>
 		</Layout>
