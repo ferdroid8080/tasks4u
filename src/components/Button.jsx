@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Button({ children, ...props }) {
   let classes = [];
@@ -6,14 +7,20 @@ function Button({ children, ...props }) {
     classes.push('Button--primary');
   }
   if (props.rounded) {
-    classes.push('Button--rounded');
+    classes.push('rounded');
   }
 
-  return (
+  let component = (
     <button className={`Button ${classes.join(' ')}`}>
       {children}
     </button>
   );
+
+  if (props.link) {
+    component = <Link className={`Button ${classes.join(' ')}`} to={props.to}>{children}</Link>
+  }
+
+  return component;
 }
 
 export default Button;
