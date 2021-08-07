@@ -6,16 +6,16 @@
   align-items: center;
   height: 100vh;
   justify-content: space-evenly;
-}
 
-.Onboarding--HeaderTitle {
+  .Onboarding--HeaderTitle {
 
-  h2 {
-    margin: 41px 0px 10px 0px;
-    color: $dark-lime-green;
-  }
-  p {
-    color: $dark-green;
-    font-size: 12px;
+    h2 {
+      margin: 41px 0px 10px 0px;
+      color: $dark-lime-green;
+    }
+    p {
+      color: $dark-green;
+      font-size: 12px;
+    }
   }
 }
