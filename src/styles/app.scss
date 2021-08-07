@@ -1,0 +1,21 @@
+@import 'shared';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-default;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@import './components/layout.scss';
+@import './components/button.scss';
+
+// pages
+@import './components/pages/onboarding'
