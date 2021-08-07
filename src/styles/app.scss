@@ -13,9 +13,17 @@ body {
 .text-center {
   text-align: center;
 }
+a {
+  text-decoration: none;
+}
 
-@import './components/layout.scss';
-@import './components/button.scss';
+.rounded {
+  border-radius: 30px;
+}
+
+@import './components/layout';
+@import './components/button';
 
 // pages
-@import './components/pages/onboarding'
+@import './components/pages/onboarding';
+@import './components/pages/login';
