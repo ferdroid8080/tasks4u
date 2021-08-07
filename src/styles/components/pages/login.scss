@@ -1,0 +1,45 @@
+@import '../../shared';
+
+.Login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+
+  .Login--inner {
+    
+    .Login--HeaderTitle {
+      h2 {
+        margin: 41px 0px 0px 0px;
+        color: $dark-lime-green;
+      }
+      p {
+        margin: 20px 0px;
+        color: $dark-green;
+        font-size: 12px;
+      }
+    }
+
+  }
+
+  .Login--form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+
+    input {
+      font: inherit;
+      font-size: .8rem;
+      outline: 0;
+      border: 2px solid #649614;
+      background-color: #F5F5F5;
+      padding: 5px 18px;
+      &::placeholder {
+        font-size: .7rem;
+        color: #5FAD2E;
+      }
+    }
+  }
+}
