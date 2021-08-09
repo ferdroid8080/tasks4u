@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import Layout from '../../components/Layout';
+import Layout from '../Layout';
 import SearchToolbar from '../SearchToolbar';
 
 function Boards() {
