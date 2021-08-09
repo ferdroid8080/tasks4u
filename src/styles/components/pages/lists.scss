@@ -1,0 +1,26 @@
+@import '../../shared';
+
+.Lists {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  padding: 20px 0;
+
+  .Lists--HeaderTitle {
+    h4 {
+      color: $dark-lime-green;
+    }
+    .Lists--BoardsName {
+      p {
+        font-size: .8rem;
+        color: $dark-green;
+      }
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+  }
+
+}

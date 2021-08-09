@@ -25,8 +25,11 @@ a {
 @import './components/layout';
 @import './components/button';
 @import './components/search';
+@import './components/tasks/taskscards';
+@import './components/tasks/taskscard';
 
 // pages
 @import './components/pages/onboarding';
 @import './components/pages/login';
 @import './components/pages/boards';
+@import './components/pages/lists';
