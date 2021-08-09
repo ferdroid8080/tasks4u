@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../Layout';
 import doorPerson from '../../images/door-person-1.svg';
-import Button from '../Button';
+import TrelloClient, { Trello } from 'react-trello-client';
 
 function Login() {
 	return (
@@ -19,11 +19,32 @@ function Login() {
 						</p>
 					</div>
 				</div>
-				<div className="Login--form">
-					<input type="text" placeholder='Ingresa tu llave de API aqui...' className='rounded' />
-				</div>
 				<div className="Login--action">
-					<Button primary rounded>Accede con Trello</Button>
+					<TrelloClient 
+						apiKey={process.env.REACT_APP_TRELLO_API_KEY}
+						clientVersion={1}
+						apiEndpoint="https://api.trello.com"
+						authEndpoint="https://trello.com"
+						intentEndpoint="https://trello.com"
+						authorizeName="Tasks4u"
+						authorizeType="popup"
+						authorizePersist={true}
+						authorizeInteractive={true}
+						authorizeScopeRead={false}
+						authorizeScopeWrite={true}
+						authorizeScopeAccount={true}
+						authorizeExpiration="never"
+						authorizeOnSuccess={() => {
+							sessionStorage.setItem('trelloToken', Trello.token());
+							// redirect to Boards page
+						}}
+						authorizeOnError={() => console.log("Login error!")}
+						autoAuthorize={false}
+						authorizeButton={true}
+						buttonStyle="flat"
+						buttonColor="green"
+						buttonText="Accede con Trello"
+					/>
 				</div>
 			</div>
 		</Layout>
