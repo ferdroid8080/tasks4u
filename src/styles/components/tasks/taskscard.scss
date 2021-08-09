@@ -1,0 +1,30 @@
+@import '../../shared';
+
+.TasksCards--Col {
+  margin: 30px 20px 30px 0;
+  border: 2px solid #AAC67C;
+  border-radius: 8px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  background-color: #DFFCC8;
+  padding: 5px 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  .Vertical-Bar {
+    border-radius: 12px;
+    width: 8px;
+    height: 100%;
+    margin-right: 10px;
+  }
+
+  .Lists--Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 145px;
+    height: 95px;
+    line-height: 1.7rem;
+  }
+
+}

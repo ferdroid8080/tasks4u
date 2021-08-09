@@ -1,0 +1,11 @@
+@import '../../shared';
+
+.Tasks--Cards {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-align: center;
+  scroll-snap-type: x proximity;
+}
