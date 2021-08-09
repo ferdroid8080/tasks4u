@@ -8,6 +8,7 @@
 
 body {
   font-family: $font-default;
+  background-color: $gray;
 }
 
 .text-center {
@@ -27,3 +28,4 @@ a {
 // pages
 @import './components/pages/onboarding';
 @import './components/pages/login';
+@import './components/pages/boards';
