@@ -4,6 +4,8 @@ import Button from '../Button';
 import Layout from '../Layout';
 
 function Onboarding() {
+	let isLoggedIn = localStorage.getItem('trello_token') !== null;
+
 	return (
 		<Layout>
 			<div className="Onboarding">
@@ -17,7 +19,7 @@ function Onboarding() {
 					</div>
 				</div>
 				<div className="Onboarding--action">
-					<Button link to='/auth' primary rounded>Comenzar</Button>
+					<Button link to={isLoggedIn ? '/boards' : '/auth'} primary rounded>Comenzar</Button>
 				</div>
 			</div>
 		</Layout>
