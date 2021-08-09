@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import Layout from '../../components/Layout';
-import searchIcon from '../../images/search-ic.svg';
+import SearchToolbar from '../SearchToolbar';
 
 function Boards() {
   let isLoggedIn = localStorage.getItem('trello_token') !== null;
@@ -15,9 +15,7 @@ function Boards() {
 
   let boardsComponent = (
     <>
-    <div className="Boards--SearchToolbar">
-      <img src={searchIcon} alt="Search Icon" />
-    </div>
+    <SearchToolbar />
     <div className="Boards--Inner">
       <div className="Boards--HeaderTitle">
         <h2>Seleccione un tablero</h2>
