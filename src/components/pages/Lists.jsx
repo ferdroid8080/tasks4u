@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../Layout';
 import SearchToolbar from '../SearchToolbar';
 import TasksCards from '../Tasks/TasksCards';
+import BoardMembers from '../BoardMembers';
 
 function Lists() {
   return (
@@ -24,6 +25,11 @@ function Lists() {
             { id: 103, title: 'Done', number: 7, color: '#AD86E0' },
           ]} />
         </div>
+        <BoardMembers members={[
+          { id: 100, name: 'Andres Fernando' },
+          { id: 101, name: 'Edward Lince' },
+          { id: 102, name: 'Antonio Perez' },
+        ]} />
       </div>
     </Layout>
   );
