@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Layout from '../Layout';
 import SearchToolbar from '../SearchToolbar';
 
@@ -23,6 +23,10 @@ function Boards() {
     }
   }
 
+  const clickedHandler = (id) => {
+    history.push(`/boards/${id}/lists`);
+  }
+
   useEffect(() => {
     if (!isLoggedIn) {
       history.push('/auth');
@@ -44,8 +48,8 @@ function Boards() {
         {loading ? <div className="Boards--Loading text-center">Cargando...</div> : null}
         {
           boards && boards.map(item => (
-            <div className="Boards--Item text-center" key={item.id}>
-              <p>{ item.name }</p>
+            <div className="Boards--Item text-center" onClick={() => clickedHandler(item.id)} key={item.id}>
+              <p>{item.name}</p>
             </div>
           ))
         }
